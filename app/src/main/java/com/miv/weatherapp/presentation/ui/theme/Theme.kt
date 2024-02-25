@@ -1,4 +1,4 @@
-package com.miv.weatherapp.ui.theme
+package com.miv.weatherapp.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
