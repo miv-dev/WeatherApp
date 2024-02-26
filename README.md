@@ -2,5 +2,6 @@
 
 In file gradle.properties set your apikey
 
-For example:
-apikey=<your key>
+## Format
+
+apikey=YOUR API KEY
