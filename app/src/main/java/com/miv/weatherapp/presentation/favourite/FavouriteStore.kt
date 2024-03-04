@@ -11,7 +11,6 @@ import com.miv.weatherapp.domain.usecase.GetWeatherUseCase
 import com.miv.weatherapp.presentation.favourite.FavouriteStore.Intent
 import com.miv.weatherapp.presentation.favourite.FavouriteStore.Label
 import com.miv.weatherapp.presentation.favourite.FavouriteStore.State
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -21,7 +20,7 @@ interface FavouriteStore : Store<Intent, State, Label> {
 
         data object ClickSearch : Intent
 
-        data object ClickToFavourite : Intent
+        data object ClickAddToFavourite : Intent
 
         data class CityItemClick(val city: City) : Intent
 
@@ -115,7 +114,7 @@ class FavouriteStoreFactory @Inject constructor(
             when (intent) {
                 is Intent.CityItemClick -> publish(Label.CityItemClick(intent.city))
                 Intent.ClickSearch -> publish(Label.ClickSearch)
-                Intent.ClickToFavourite -> publish(Label.ClickToFavourite)
+                Intent.ClickAddToFavourite -> publish(Label.ClickToFavourite)
             }
 
 
