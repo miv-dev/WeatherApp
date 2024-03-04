@@ -1,6 +1,7 @@
 package com.miv.weatherapp.di
 
 import android.content.Context
+import com.miv.weatherapp.presentation.MainActivity
 import dagger.BindsInstance
 import dagger.Component
 
@@ -9,6 +10,8 @@ import dagger.Component
     modules = [DataModule::class, PresentationModule::class]
 )
 interface ApplicationComponent {
+
+    fun inject(activity: MainActivity)
 
     @Component.Factory
     interface Factory {
